@@ -46,12 +46,7 @@ export function DataTable<TData>({
       {...props}
     >
       {children}
-      <div
-        className={cn(
-          "relative overflow-auto rounded-md border",
-          tableWrapperClassName
-        )}
-      >
+      <div className={cn("relative overflow-auto", tableWrapperClassName)}>
         <Table>
           <TableHeader className="sticky top-0 z-10">
             {table.getHeaderGroups().map((headerGroup) => (
@@ -84,6 +79,7 @@ export function DataTable<TData>({
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  className="hover:bg-table-cell-hover"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell

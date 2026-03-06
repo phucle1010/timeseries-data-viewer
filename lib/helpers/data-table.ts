@@ -68,7 +68,6 @@ const getCommonPinningStyles = <TData>({
     right: isPinned === "right" ? `${column.getAfter("right")}px` : undefined,
     opacity: isPinned ? 0.97 : 1,
     position: isPinned ? "sticky" : "relative",
-    background: isPinned ? "var(--background)" : "var(--background)",
     width: column.getSize(),
     zIndex: isPinned ? 1 : 0,
   };
